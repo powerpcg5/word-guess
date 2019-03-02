@@ -1,0 +1,154 @@
+<!--************************************************************************
+    * word-guess/index.html
+    * Word Guess game
+    *
+    * 1827 Wednesday, 27 February 2019 (EST) [17954]
+    *
+    * University of Richmond Coding Boot Camp run by Trilogy Education Services
+    * Austin Kim
+    *
+    * Modified:
+    *   2343 Friday, 1 March 2019 (EST) [17956]
+    *   0247 Saturday, 2 March 2019 (EST) [17957]
+    ************************************************************************-->
+<!DOCTYPE html>
+<html xmlns='http://www.w3.org/1999/xhtml' lang='en'>
+  <head>
+    <meta charset='utf-8'/>
+    <meta name='viewport'
+      content='width=device-width, initial-scale=1, shrink-to-fit=no'/>
+    <!--Bootstrap CSS-->
+    <link rel='stylesheet'
+      href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'
+      integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T'
+      crossorigin='anonymous'/>
+    <!--CSS stylesheet-->
+    <link rel='stylesheet' type='text/css' href='assets/css/style.css'/>
+    <title>JavaScript Word Guess</title>
+    <script defer src='assets/javascript/game.js'></script>
+  </head>
+  <body>
+    <!--Bootstrap navigation bar-->
+    <nav class='navbar navbar-light bg-light'>
+      <a class='navbar-brand' href='index.html'>JavaScript Word Guess</a>
+      <button type='button' class='btn btn-outline-danger' data-toggle='modal'
+        data-target='#resetModal' id='resetAll'>Reset All</button>
+      <button type='button' class='btn btn-outline-success' id='newGame'>New
+        Game</button>
+      <button type='button' class='btn btn-outline-info'
+        id='instructions'>Instructions</button>
+    </nav>
+    <!--Main game container-->
+    <main class='container mt-4'>
+      <div class='row border-top border-left border-right'>
+        <div class='col border-right text-center' id='player1'>Player 1</div>
+        <div class='col border-left  text-center' id='player2'>Player 2</div>
+      </div>
+      <div class='row border-top border-left border-right'>
+        <div class='col border-right text-center' id='p1score'>0</div>
+        <div class='col border-left  text-center' id='p2score'>0</div>
+      </div>
+      <div class='row border-top border-left border-right'>
+        <div class='col border-right text-center' id='p1word'>_</div>
+        <div class='col border-left  text-center' id='p2word'>_</div>
+      </div>
+      <div class='row border-top border-left border-right'>
+        <div class='col border-right text-center' id='p1letters'>()</div>
+        <div class='col border-left  text-center' id='p2letters'>()</div>
+      </div>
+      <div class='row border-top border-left border-right border-bottom'>
+        <div class='col border-right text-center' id='p1turn'>-</div>
+        <div class='col border-left  text-center' id='p2turn'>-</div>
+      </div>
+    </main>
+    <!--Reset modal-->
+    <div class='modal fade' id='resetModal' tabindex='-1' role='dialog'
+      aria-labelledby='resetModalLabel' aria-hidden='true'>
+      <div class='modal-dialog' role='document'>
+        <div class='modal-content'>
+          <div class='modal-header'>
+            <h5 class='modal-title' id='resetModalLabel'>JavaScript Word
+              Guess</h5>
+            <button type='button' class='close' data-dismiss='modal'
+              aria-label='Close'>
+              <span aria-hidden='true'>&times;</span>
+            </button>
+          </div>
+          <div class='modal-body'>
+            <div class='md-form'>
+              <label for='player1name'>Player 1 name:</label>
+              <input type='text' class='form-control' id='player1name'
+                placeholder='Player 1'/>
+              <label class='mt-3' for='player2name'>Player 2 name:</label>
+              <input type='text' class='form-control' id='player2name'
+                placeholder='Player 2'/>
+            </div>
+          </div>
+          <div class='modal-footer'>
+            <button type='button' class='btn btn-secondary'
+              data-dismiss='modal'>Cancel</button>
+            <button type='button' class='btn btn-primary'
+              id='resetModalOK'>OK</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--(New) word modal-->
+    <div class='modal fade' id='wordModal' tabindex='-1' role='dialog'
+      aria-labelledby='wordModalLabel' aria-hidden='true'>
+      <div class='modal-dialog' role='document'>
+        <div class='modal-content'>
+          <h5 class='modal-title' id='wordModalLabel'>JavaScript Word
+            Guess</h5>
+
+      <!--GOT HERE-->
+        </div>
+      </div>
+    </div>
+    <!--Footer-->
+    <div class='container fixed-bottom'>
+      <div class='row'>
+        <div class='col'>
+          <hr class='lainbow'/>
+        </div>
+      </div>
+      <div class='row justify-content-between'>
+        <div class='col-auto'>
+          Copyright &copy; 2019 Austin Kim under the terms of the <a
+            href='https://opensource.org/licenses/MIT/'>MIT License</a>.<br
+          />Last modified at 0247 Saturday, 2 March 2019 (EST) [17957].<br
+          />Send errors and broken links to freennix at gmail dot com.
+        </div>
+        <!--Tooltips must be placed on _img_ elements for proper positioning-->
+        <div class='col-auto'>
+          <a href='https://validator.w3.org/check?uri=referer'><img
+            src='https://www.w3.org/QA/Tools/I_heart_validator_lg.png'
+            title='Valid HTML 5!' alt='Valid HTML 5!'
+            data-toggle='tooltip'/></a>
+          <a href='https://jigsaw.w3.org/css-validator/check?uri=referer'><img
+            src='https://jigsaw.w3.org/css-validator/images/vcss.png'
+            title='Valid CSS level 3!' alt='Valid CSS level 3!'
+            data-toggle='tooltip'/></a>
+        </div>
+      </div>
+    </div>
+    <!--jQuery (slim build)-->
+    <script src='https://code.jquery.com/jquery-3.3.1.slim.min.js'
+      integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo'
+      crossorigin='anonymous'></script>
+    <!--Popper.js-->
+    <script
+      src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js'
+      integrity='sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1'
+      crossorigin='anonymous'></script>
+    <!--Bootstrap-->
+    <script
+      src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js'
+      integrity='sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM'
+      crossorigin='anonymous'></script>
+    <!--Enable Bootstrap tooltips-->
+    <script>
+      $("[data-toggle='tooltip']").tooltip()
+    </script>
+  </body>
+</html>

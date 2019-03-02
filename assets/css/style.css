@@ -1,0 +1,50 @@
+ /****************************************************************************
+  * word-guess/assets/css/style.css
+  * CSS stylesheet for Word Guess game
+  *
+  * 1748 Wednesday, 27 February 2019 (EST) [17954]
+  *
+  * University of Richmond Coding Boot Camp run by Triology Education Services
+  * Austin Kim
+  *
+  * Modified:
+  *   0035 Saturday, 2 March 2019 (EST) [17957]
+  ****************************************************************************/
+
+ /* Body */
+body {
+  background-color: #fff7e9;
+  background-image: url('../images/background.jpeg');
+  background-position: top;
+  background-repeat: repeat-y}
+
+ /* Declare base font size */
+ :root {
+  --main-font-size: 48px}
+
+ /* Player names */
+#player1, #player2 {
+  font-size: var(--main-font-size)}
+
+ /* Player scores */
+#p1score, #p2score {
+  font-size: var(--main-font-size)}
+
+ /* Player words */
+#p1word, #p2word {
+  font-size: calc(1.5 * var(--main-font-size));
+  font-weight: bold}
+
+ /* Player letters (guessed) */
+#p1letters, #p2letters {
+  font-size: var(--main-font-size)}
+
+ /* Player turn/message */
+#p1turn, #p2turn {
+  font-size: var(--main-font-size);
+  color: red}
+
+ /* Footer */
+hr.lainbow {
+  background-image: url('../images/lainbow.png');
+  height: 2px}
