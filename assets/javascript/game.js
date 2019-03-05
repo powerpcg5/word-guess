@@ -11,7 +11,7 @@
  //   1007 Saturday, 2 March 2019 (EST) [17957]
  //   0143 Sunday, 3 March 2019 (EST) [17958]
  //   1856 Monday, 4 March 2019 (EST) [17959]
- //   1849 Tuesday, 5 March 2019 (EST) [17960]
+ //   1856 Tuesday, 5 March 2019 (EST) [17960]
  //////////////////////////////////////////////////////////////////////////////
 
  // GLOBAL VARIABLES AND OBJECTS
@@ -143,7 +143,7 @@ function resetAll() {
   scorediv = document.getElementById('p2score')
   scorediv.textContent = score.p2
    // Clear Player 1's new word field
-  var wordElement = getElementById('p1newWord')
+  var wordElement = document.getElementById('p1newWord')
   wordElement.value = ''
    // Get Player 1's word for Player 2
   var wordPromptElement = document.getElementById('p1wordPrompt')
@@ -195,7 +195,7 @@ $('#p1wordModalOK').click(function() {
   if (wordValid) {
     game.p2word = word
    // Clear Player 2's new word field
-  var wordElement = getElementById('p2newWord')
+  var wordElement = document.getElementById('p2newWord')
   wordElement.value = ''
    // Get Player 2's word for Player 1
     var wordPromptElement = document.getElementById('p2wordPrompt')
@@ -254,7 +254,7 @@ $('#invalidWordModalOK').click(function() {
  // This function is called when a user clicks on the _New Game_ button
 $('#newGame').click(function() {
    // Clear Player 1's new word field
-  var wordElement = getElementById('p1newWord')
+  var wordElement = document.getElementById('p1newWord')
   wordElement.value = ''
    // Get Player 1's word for Player 2
   var wordPromptElement = document.getElementById('p1wordPrompt')
