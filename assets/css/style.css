@@ -9,6 +9,7 @@
   *
   * Modified:
   *   0035 Saturday, 2 March 2019 (EST) [17957]
+  *   0128 Tuesday, 5 March 2019 (EST) [17960]
   ****************************************************************************/
 
  /* Body */
@@ -32,12 +33,12 @@ body {
 
  /* Player words */
 #p1word, #p2word {
-  font-size: calc(1.5 * var(--main-font-size));
+  font-size: calc(1.25 * var(--main-font-size));
   font-weight: bold}
 
  /* Player letters (guessed) */
 #p1letters, #p2letters {
-  font-size: var(--main-font-size)}
+  font-size: calc(0.75 * var(--main-font-size))}
 
  /* Player turn/message */
 #p1turn, #p2turn {
