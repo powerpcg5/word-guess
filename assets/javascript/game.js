@@ -11,7 +11,7 @@
  //   1007 Saturday, 2 March 2019 (EST) [17957]
  //   0143 Sunday, 3 March 2019 (EST) [17958]
  //   1856 Monday, 4 March 2019 (EST) [17959]
- //   0119 Tuesday, 5 March 2019 (EST) [17960]
+ //   1849 Tuesday, 5 March 2019 (EST) [17960]
  //////////////////////////////////////////////////////////////////////////////
 
  // GLOBAL VARIABLES AND OBJECTS
@@ -120,9 +120,6 @@ var game = {
     return}
   }
 
-/*
- /* turn definition and set code */
-
  // GLOBAL FUNCTIONS
 
  // Global resetAll() function (called at beginning and when button is pressed)
@@ -145,6 +142,9 @@ function resetAll() {
   scorediv.textContent = score.p1
   scorediv = document.getElementById('p2score')
   scorediv.textContent = score.p2
+   // Clear Player 1's new word field
+  var wordElement = getElementById('p1newWord')
+  wordElement.value = ''
    // Get Player 1's word for Player 2
   var wordPromptElement = document.getElementById('p1wordPrompt')
   wordPromptElement.textContent = player1 + ', please enter your word for ' +
@@ -194,6 +194,9 @@ $('#p1wordModalOK').click(function() {
       wordValid = wordValid && word[i] >= 'A' && word[i] <= 'Z'}
   if (wordValid) {
     game.p2word = word
+   // Clear Player 2's new word field
+  var wordElement = getElementById('p2newWord')
+  wordElement.value = ''
    // Get Player 2's word for Player 1
     var wordPromptElement = document.getElementById('p2wordPrompt')
     wordPromptElement.textContent = player2 + ' please enter your word for ' +
@@ -250,6 +253,9 @@ $('#invalidWordModalOK').click(function() {
 
  // This function is called when a user clicks on the _New Game_ button
 $('#newGame').click(function() {
+   // Clear Player 1's new word field
+  var wordElement = getElementById('p1newWord')
+  wordElement.value = ''
    // Get Player 1's word for Player 2
   var wordPromptElement = document.getElementById('p1wordPrompt')
   wordPromptElement.textContent = player1 + ', please enter your word for ' +
