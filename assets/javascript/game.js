@@ -11,7 +11,7 @@
  //   1007 Saturday, 2 March 2019 (EST) [17957]
  //   0143 Sunday, 3 March 2019 (EST) [17958]
  //   1856 Monday, 4 March 2019 (EST) [17959]
- //   1936 Tuesday, 5 March 2019 (EST) [17960]
+ //   1942 Tuesday, 5 March 2019 (EST) [17960]
  //////////////////////////////////////////////////////////////////////////////
 
  // GLOBAL VARIABLES AND OBJECTS
@@ -199,7 +199,7 @@ $('#p1wordModalOK').click(function() {
   wordElement.value = ''
    // Get Player 2's word for Player 1
     var wordPromptElement = document.getElementById('p2wordPrompt')
-    wordPromptElement.textContent = player2 + ' please enter your word for ' +
+    wordPromptElement.textContent = player2 + ', please enter your word for ' +
       player1 + ' (' + player1 + ", please don't look:)"
     promptState = 1
     $('#p2wordModal').modal('show')}
