@@ -11,7 +11,7 @@
  //   1007 Saturday, 2 March 2019 (EST) [17957]
  //   0143 Sunday, 3 March 2019 (EST) [17958]
  //   1856 Monday, 4 March 2019 (EST) [17959]
- //   2057 Tuesday, 5 March 2019 (EST) [17960]
+ //   2109 Tuesday, 5 March 2019 (EST) [17960]
  //////////////////////////////////////////////////////////////////////////////
 
  // GLOBAL VARIABLES AND OBJECTS
@@ -167,6 +167,12 @@ function updateScore() {
 var element = document.getElementById('resetAll')
 element.onclick = function() {
   gameOver = true
+  return}
+
+ // Likewise, if _New Game_ be clicked, stop any currently playing game
+element = document.getElementById('newGame')
+element.onclick = function() {
+  gameOver= true
   return}
 
  // These two callback functions are called when a user clicks on either _OK_
