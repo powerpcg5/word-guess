@@ -11,7 +11,7 @@
  //   1007 Saturday, 2 March 2019 (EST) [17957]
  //   0143 Sunday, 3 March 2019 (EST) [17958]
  //   1856 Monday, 4 March 2019 (EST) [17959]
- //   1909 Tuesday, 5 March 2019 (EST) [17960]
+ //   1936 Tuesday, 5 March 2019 (EST) [17960]
  //////////////////////////////////////////////////////////////////////////////
 
  // GLOBAL VARIABLES AND OBJECTS
@@ -265,8 +265,8 @@ $('#newGame').click(function() {
   )
 
  // This main event function is called when a user presses a key to guess
-$(document).keyup(function(e) {
-  var key = e.key.toUpperCase()
+document.onkeyup = function(event) {
+  var key = event.key.toUpperCase()
   var element                            // DOM element pointer
   var match = false                      // A letter matched
   var word                               // Temporary word variable
@@ -343,7 +343,6 @@ $(document).keyup(function(e) {
           }
     }
   }
-  )
 
  // Show reset modal to start it all
 $('#resetModal').modal('show')
