@@ -11,7 +11,7 @@
  //   1007 Saturday, 2 March 2019 (EST) [17957]
  //   0143 Sunday, 3 March 2019 (EST) [17958]
  //   1856 Monday, 4 March 2019 (EST) [17959]
- //   1942 Tuesday, 5 March 2019 (EST) [17960]
+ //   2057 Tuesday, 5 March 2019 (EST) [17960]
  //////////////////////////////////////////////////////////////////////////////
 
  // GLOBAL VARIABLES AND OBJECTS
@@ -162,6 +162,12 @@ function updateScore() {
   return}
 
  // MODAL CALLBACK FUNCTIONS
+
+ // If _Reset All_ be clicked, stop any currently playing game
+var element = document.getElementById('resetAll')
+element.onclick = function() {
+  gameOver = true
+  return}
 
  // These two callback functions are called when a user clicks on either _OK_
  //   or _Cancel_ (but not _Close_) in the player-name-setting reset modal,
